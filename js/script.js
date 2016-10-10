@@ -8,12 +8,13 @@ var guessProgress = "";
 var allLetterString = "abcdefghijklmnopqrstuvwxyz";
 
 //First fxn - starts the game;
-function getAnswerWord() {
   //Assign answerWord var as a random commonWord
-  answerWord += Math.random(0 - commonWords.length())
+  var answerWord = commonWords[Math.floor(Math.random() * commonWords.length)];
   //For each character in answerWord, set guessProgress char to _
-  for (i=0; i < answerWord.length(); i++ ) {
+  for (var i = 0; i < answerWord.length(); i++ ) {
     guessProgress.charAt(i) = "_";
+    console.log(answerWord);
+    console.log(guessProgress);
   }
 }
 
@@ -33,7 +34,7 @@ function showGuessProgress() {
     guessAttempts--;
   } else {
     rightGuesses += playerGuess;
-    for (i=0; i < guessProgress.length(); i++) {
+    for (var i = 0; i < guessProgress.length(); i++) {
     guessProgress.charAt(i) = playerGuess;
     }
   }
