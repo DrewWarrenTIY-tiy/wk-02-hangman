@@ -6,6 +6,7 @@ var rightGuesses = "";
 var wrongGuesses = "";
 var guessProgress = "";
 var allLetterString = "abcdefghijklmnopqrstuvwxyz";
+var loseAlert = "No more guesses. You lose. The correct answer was \"" + answerWord + "\".";
 
 //First fxn - starts the game;
   //Assign answerWord var as a random commonWord
@@ -47,11 +48,9 @@ if (answerWord.indexOf(playerGuess) === -1) {
 // }
 
 //Fourth fxn - Checks if player has won or lost;
-function didPlayerWin() {
-  if (guessProgress.contains("_") {
-    alert("Congratulations, you won!")
-  }
   if (guessAttempts === 0) {
-    alert("Oh no! You lose... D:");
+    alert(loseAlert);
   }
-}
+  if (guessProgress.indexOf("_") === -1) {
+    alert("Congratulations, you won!")
+   }
