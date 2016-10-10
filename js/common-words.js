@@ -8,5 +8,3 @@ var commonWords = [
   "could","people","than","first","water","been","call",
   "who","oil","its","now","find","long","down","day","did","get","come","made","may","part"
 ];
-
-var
