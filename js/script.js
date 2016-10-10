@@ -19,13 +19,12 @@ var allLetterString = "abcdefghijklmnopqrstuvwxyz";
 }
 
 //Second fxn - player passes in a guess, confirms guess is a letter that has not been guessed;
-function getPlayerGuess() {
-  var playerGuess = prompt("Guess a letter:")
+var playerGuess = prompt("Guess a letter:")
   playerGuess.toLowerCase();
-  if (playerGuess === allLetterString.charAt(-1)) {
-    alert("Not a letter, please guess a letter.")
-  }
-}
+  if (allLetterString.indexOf(playerGuess) === -1) {
+    alert("Not a letter, please guess a letter.");
+  } else alert("Valid guess, thanks!");
+
 
 //Third fxn - Checks if Guess is right/wrong, change guess progress if right, decrement guessAttempts if wrong, add guess letter to right/wrong vars to prevent duplicate guess;
 function showGuessProgress() {
