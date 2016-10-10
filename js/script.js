@@ -27,17 +27,24 @@ var playerGuess = prompt("Guess a letter:")
 
 
 //Third fxn - Checks if Guess is right/wrong, change guess progress if right, decrement guessAttempts if wrong, add guess letter to right/wrong vars to prevent duplicate guess;
-function showGuessProgress() {
-  if (playerGuess === answerWord.charAt(-1)) {
-    wrongGuesses += playerGuess;
+if (answerWord.indexOf(playerGuess) === -1) {
     guessAttempts--;
+    console.log(guessAttempts);
   } else {
-    rightGuesses += playerGuess;
-    for (var i = 0; i < guessProgress.length(); i++) {
-    guessProgress.charAt(i) = playerGuess;
-    }
+      console.log(guessAttempts);
   }
-}
+
+// function showGuessProgress() {
+//   if (playerGuess === answerWord.charAt(-1)) {
+//     wrongGuesses += playerGuess;
+//     guessAttempts--;
+//   } else {
+//     rightGuesses += playerGuess;
+//     for (var i = 0; i < guessProgress.length(); i++) {
+//     guessProgress.charAt(i) = playerGuess;
+//     }
+//   }
+// }
 
 //Fourth fxn - Checks if player has won or lost;
 function didPlayerWin() {
