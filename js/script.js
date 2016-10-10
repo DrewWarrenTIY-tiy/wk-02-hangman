@@ -11,13 +11,12 @@ var loseAlert = "No more guesses. You lose. The correct answer was \"" + answerW
 //First fxn - starts the game;
   //Assign answerWord var as a random commonWord
   var answerWord = commonWords[Math.floor(Math.random() * commonWords.length)];
-  //For each character in answerWord, set guessProgress char to _
-  for (var i = 0; i < answerWord.length(); i++ ) {
-    guessProgress.charAt(i) = "_";
-    console.log(answerWord);
-    console.log(guessProgress);
-  }
-}
+  //For each character in answerWord, set guessProgress char to _ NOT WORKING
+  // for (var i = 0; i < answerWord.length(); i++ ) {
+  //   guessProgress.charAt(i) = "_";
+  //   console.log(answerWord);
+  //   console.log(guessProgress);
+  // }
 
 //Second fxn - player passes in a guess, confirms guess is a letter that has not been guessed;
 var playerGuess = prompt("Guess a letter:")
