@@ -1,10 +1,26 @@
-"use strict";
-
 var commonWords = [
-  "the","and","you","that","was","for","are","with","his","they","this","have","from","one","had","word","but","not",
-  "what","all","were","when","your","can","said","there",
-  "use","each","which","she","how","their","will","other","about","out","many","then","them","these","some","her","would","make","like","him","into","time","has",
-  "look","two","more","write","see","number","way",
-  "could","people","than","first","water","been","call",
-  "who","oil","its","now","find","long","down","day","did","get","come","made","may","part"
+  "the","of","and","a","to","in","is","you","that","it",
+  "he","was","for","on","are","as","with","his","they",
+  "I","at","be","this","have","from","or","one","had",
+  "by","word","but","not","what","all","were","we","when",
+  "your","can","said","there","use","an","each","which",
+  "she","do","how","their","if","will","up","other",
+  "about","out","many","then","them","these","so","some",
+  "her","would","make","like","him","into","time","has",
+  "look","two","more","write","go","see","number","no",
+  "way","could","people","my","than","first","water",
+  "been","call","who","oil","its","now","find","long",
+  "down","day","did","get","come","made","may","part"
 ];
+var wordList = [];
+
+//Pull a random word of at least 3 letters from the array of common words.
+function getWord() {
+  for (let i = 0; i < commonWords.length; i++) {
+    if (commonWords[i].length > 2) {
+      wordList.push(commonWords[i]);
+    }
+  }
+  answerWord = wordList[Math.floor(Math.random() * wordList.length)];
+  return answerWord;
+}
