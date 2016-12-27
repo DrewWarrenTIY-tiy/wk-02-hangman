@@ -1,10 +1,11 @@
 "use strict";
 
-var tries = 8;
-var guess;
 var answerWord = "";
+var guess;
+var guessedLetters = "";
 var guessProgress = "";
 var status = "status";
+var tries = 8;
 
 //Display tries on page load.
 document.querySelector('.triesCount').innerHTML = "Tries: " + tries;
@@ -53,8 +54,10 @@ function updateGuess() {
   showProgress();
   checkMatch();
   setStatus();
+  trackGuesses();
   checkWin();
   checkLose();
+  console.log(guessedLetters);
 }
 
 //Check if guess is a match, return boolean and update tries.
@@ -68,14 +71,21 @@ function checkMatch() {
   }
 }
 
+//Update guessed letters
+function trackGuesses() {
+  document.querySelector('.guessedLetters').innerHTML = "You have already guessed: " + guessedLetters;
+}
+
 //Set and Display Status Message.
 function setStatus() {
   if (checkMatch() === true) {
-    status = "Nice Guess! Keep it up!"
+    status = "Nice Guess! Keep it up!";
+    guessedLetters+= guess;
   } else {
     status = "Whoops! Wrong... Try again!"
     tries--;
     document.querySelector('.triesCount').innerHTML = "Tries: " + tries;
+    guessedLetters += guess.toUpperCase() + ", ";
   }
   document.querySelector('.statusHolder').innerHTML = status;
 }
