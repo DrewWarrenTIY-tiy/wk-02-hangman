@@ -7,25 +7,27 @@
     <link rel="stylesheet" href="./css/master.css">
   </head>
   <body>
-    <div class="triesCount">
-
-    </div>
     <div class="statusHolder">
       Let's Play Hangman! Take your first guess.
     </div>
-    <div class="guessHolder">
-      <input class="guessLetter" type="text" name="guess" placeholder="Guess a letter" maxlength="1">
-      <button class="submitGuess" >Guess</button>
-    </div>
-
-    <div class="progressHolder">
-      <div class="progressString">
+    <div class="gameHolder">
+      <div class="triesCount">
 
       </div>
-    </div>
+      <div class="guessHolder">
+        <input class="guessLetter" type="text" name="guess" placeholder="Guess a letter" maxlength="1">
+        <button class="submitGuess" >Guess</button>
+      </div>
 
-    <div class="newGameHolder">
-      <button type="button" name="newGameButton" onclick="window.location.reload()">Start New Game!</button>
+      <div class="progressHolder">
+        <div class="progressString">
+
+        </div>
+      </div>
+
+      <div class="newGameHolder">
+        <button type="button" name="newGameButton" onclick="window.location.reload()">Start New Game!</button>
+      </div>
     </div>
 
   </body>

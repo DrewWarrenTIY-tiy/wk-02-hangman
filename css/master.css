@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.statusHolder {
+  font-size: 60px;
+  background-color: lightblue;
+  color: #454545;
+  margin: 0;
+  padding: 0;
+}
+
+.gameHolder {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.gameHolder div {
+  margin: 10px 0px 10px 0px;
+}

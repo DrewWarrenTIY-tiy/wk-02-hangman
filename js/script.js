@@ -57,7 +57,7 @@ function updateGuess() {
   checkLose();
 }
 
-//If guess is not a match, decrement tries.
+//Check if guess is a match, return boolean and update tries.
 function checkMatch() {
   if (answerWord.includes(guess)) {
     document.querySelector('.triesCount').innerHTML = "Tries: " + tries;
@@ -85,6 +85,7 @@ function checkLose() {
   if (tries <= 0) {
     status = "Oh no! You lost... D; \n Better luck next time!";
     document.querySelector('.statusHolder').innerHTML = status;
+    document.querySelector('.submitGuess').disabled = true;
     return true;
   }
 }
@@ -96,6 +97,7 @@ function checkWin() {
   } else {
     status = "Wow! You got it! Great job, you win!";
     document.querySelector('.statusHolder').innerHTML = status;
+    document.querySelector('.submitGuess').disabled = true;
     return true;
   }
 }
