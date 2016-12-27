@@ -80,7 +80,7 @@ function trackGuesses() {
 function setStatus() {
   if (checkMatch() === true) {
     status = "Nice Guess! Keep it up!";
-    guessedLetters+= guess;
+    guessedLetters+= guess.toUpperCase() + ", ";
   } else {
     status = "Whoops! Wrong... Try again!"
     tries--;
